@@ -96,6 +96,10 @@ describe('the enhancer', () => {
         it('should decrease durability of the item by 10 if enhancement >= 15', () => {
             expect(enhancer.fail(obj5).durability).toBe(35);
         });
+        it('should decrese enhancement level by 1 if enhancement > 16', () => {
+            expect(enhancer.fail(obj6).enhancement).toBe(16);
+            expect(enhancer.fail(obj5).enhancement).toBe(15);
+        });
     });
 
 });
